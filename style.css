@@ -259,7 +259,7 @@ body {
   padding: 10px;
   border-radius: 50%;
   box-shadow: 0 0 30px #ed2279;
-  filter: brightness(1.1);
+  /* filter: brightness(1.1); */
 }
 @keyframes animate1 {
   0% {

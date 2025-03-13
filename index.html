@@ -90,7 +90,8 @@
         <h1>About <span>Me</span></h1>
         <p>🎓Education: MCA(pursuing)</p>
         <p>📍Location: Prayagraj </p>
-        <p>🚀Skills: C,C++,JAVA,SQL,C#,HTML,CSS,REACT,ANGULAR</p>
+        <p>🚀Skills: C,C++,JAVA,SQL,C#,HTML</p>
+         <p>  CSS,REACT,ANGULAR</p>
         <button class="about_btn"><a href="#">Read More..</a></button>
       </div>
       <div class="about_photo">
@@ -306,6 +307,18 @@
         .catch(error => {
           alert("❌ Error! Please try again.");
           console.error("Error:", error);
+        });
+    });
+  });
+
+  //new code
+  document.addEventListener("DOMContentLoaded", function () {
+    const check = document.getElementById("check");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            check.checked = false; // Checkbox ko uncheck karega
         });
     });
   });
