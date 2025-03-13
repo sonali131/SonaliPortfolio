@@ -55,7 +55,7 @@
     <!-- New code -->
     <section id="home" class="home">
       <img
-        src="/image/img.png"
+        src="image/img.png"
         width="450px"
         height="400px"
         alt="image"
@@ -74,9 +74,7 @@
           <a href="https://github.com/sonali131" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="tel:+91YOUR_PHONE_NUMBER">
-            <i class="fas fa-phone"></i>
-          </a>
+         
           <a href="mailto:mishrasonali1198@gmail.com">
             <i class="fas fa-envelope"></i>
           </a>
@@ -92,7 +90,7 @@
         <h1>About <span>Me</span></h1>
         <p>🎓Education: MCA(pursuing)</p>
         <p>📍Location: Prayagraj </p>
-        <p>🚀Skills: c,c++,java,sql,c#,html,css</p>
+        <p>🚀Skills: C,C++,JAVA,SQL,C#,HTML,CSS,REACT,ANGULAR</p>
         <button class="about_btn"><a href="#">Read More..</a></button>
       </div>
       <div class="about_photo">
@@ -170,10 +168,10 @@
         <div class="project_container">
           <div class="grid_item">
             <div class="card">
-              <img src="image/apj.png" alt="apj" />
-              <a href="https://apj-theta.vercel.app/">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.Zh2ZPbGoXCj8V3j3_3m9UQHaGO&pid=Api&P=0&h=180" alt="Quiz" />
+              <a href="https://quiz-app-xi-roan.vercel.app/">
                 <div class="card_container">
-                  <h3>Tribute Website</h3>
+                  <h3>Fun Quiz</h3>
                 </div>
               </a>
             </div>
@@ -241,13 +239,12 @@
     </section>
 
     <form
-      action="https://formsubmit.co/mishrasonali1198@gmail.com"
-      method="POST"
+    
     >
       <section id="contact">
         <div class="form">
           <h1>Contact <span>Me</span></h1>
-          <form action="#home">
+          <form  action="https://script.google.com/macros/s/AKfycbwqkPxthKJoJpGgAs-0u0wx1JSkJ_XaP_2I3Y-0rAmH9_-7X2huC3rj7BrT3DTiXTWlAw/exec" method="post">
             <input
               type="text"
               name="name"
@@ -264,6 +261,7 @@
               type="number"
               name="mno"
               id="Enter Your Mobile Number"
+              placeholder="Enter Your Mobile Number"
               required=""
             /><br />
             <textarea
@@ -284,11 +282,34 @@
     </div>
 
     <script>
-      document
-        .querySelector("form")
-        .addEventListener("submit", function (event) {
-          alert("OK");
+     
+
+
+     document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Form ka default submit behavior rokna
+      
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+      })
+        .then(response => response.text())
+        .then(data => {
+          // Success message show karega
+          alert("✅ Your message has been sent successfully!");
+          form.reset(); // Form reset karna
+        })
+        .catch(error => {
+          alert("❌ Error! Please try again.");
+          console.error("Error:", error);
         });
+    });
+  });
+
     </script>
   </body>
 </html>
