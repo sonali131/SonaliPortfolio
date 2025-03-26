@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -14,7 +15,7 @@
     />
   </head>
   <body>
-    <nav>
+    <!-- <nav>
       <input type="checkbox" name="check" id="check" class="checkbox" />
       <h1 class="nav_head">Sonali..</h1>
       <ul>
@@ -28,7 +29,23 @@
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
+    </nav> -->
+    <nav>
+      <input type="checkbox" id="check" class="checkbox" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <h1 class="nav_head">Sonali..</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <a href="#contact"><button class="contact_btn">Contact Me</button></a>
+      </ul>
     </nav>
+
     <!-- <section id="home" class="home">
       <img
         src="/image/UimSonali.jpg"
@@ -59,7 +76,7 @@
         width="450px"
         height="400px"
         alt="image"
-        style="background-color: white;"
+        style="background-color: white"
       />
       <div class="description">
         <h1>
@@ -68,13 +85,16 @@
         </h1>
         <h2>From India...</h2>
         <div class="font">
-          <a href="https://www.linkedin.com/in/sonali-mishra-4239aa250/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/sonali-mishra-4239aa250/"
+            target="_blank"
+          >
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
           <a href="https://github.com/sonali131" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
-         
+
           <a href="mailto:mishrasonali1198@gmail.com">
             <i class="fas fa-envelope"></i>
           </a>
@@ -89,9 +109,9 @@
       <div class="about_section">
         <h1>About <span>Me</span></h1>
         <p>🎓Education: MCA(pursuing)</p>
-        <p>📍Location: Prayagraj </p>
+        <p>📍Location: Prayagraj</p>
         <p>🚀Skills: C,C++,JAVA,SQL,C#,HTML</p>
-         <p>  CSS,REACT,ANGULAR</p>
+        <p>CSS,REACT,ANGULAR</p>
         <button class="about_btn"><a href="#">Read More..</a></button>
       </div>
       <div class="about_photo">
@@ -100,7 +120,7 @@
           width="420px"
           height="360px"
           alt="Sonali"
-          style="background-color: white;"
+          style="background-color: white"
         />
       </div>
     </section>
@@ -131,122 +151,179 @@
       </div>
     </section>
 
-    <!-- <section id="portfolio">
-      <h1 class="port_section">My<span>Work</span></h1>
-      <div class="project1">
-        <div class="port_card">
-          <img src="/image/th.jpg" alt="abj" width="350px" height="350px" />
-          <div class="contant">
-            <h1>Project1</h1>
-            <p>Helooo jgghjhkjj,mj</p>
-          </div>
-        </div>
-
-        <div class="port_card">
-          <img src="/image/th.jpg" alt="abj" width="350px" height="350px" />
-          <div class="contant">
-            <h1>Project1</h1>
-            <p>Helooo jgghjhkjj,mj</p>
-          </div>
-        </div>
-
-        <div class="port_card">
-          <img src="/image/th.jpg" alt="abj" width="350px" height="350px" />
-          <div class="contant">
-            <h1>Project1</h1>
-            <p>Helooo jgghjhkjj,mj</p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <section id="portfolio">
       <h1 class="port_section">My<span>Work</span></h1>
 
-      <div class="project1">
-       
-      <div class="container">
-        <div class="project_container">
-          <div class="grid_item">
-            <div class="card">
-              <img src="https://tse3.mm.bing.net/th?id=OIP.Zh2ZPbGoXCj8V3j3_3m9UQHaGO&pid=Api&P=0&h=180" alt="Quiz" />
-              <a href="https://quiz-app-xi-roan.vercel.app/">
-                <div class="card_container">
-                  <h3>Fun Quiz</h3>
-                </div>
-              </a>
+      <div
+        class="project1"
+        style="display: flex; justify-content: center; margin-top: 5rem"
+      >
+        <div class="container" style="width: 100%; max-width: 1200px">
+          <div
+            class="project_container"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: center;
+            "
+          >
+            <div class="grid_item" style="width: 30%">
+              <div
+                class="card"
+                style="
+                  width: 100%;
+                  text-align: center;
+                  padding: 20px;
+                  background: rgb(48, 48, 48);
+                  border-radius: 10px;
+                "
+              >
+                <img
+                  src="https://tse3.mm.bing.net/th?id=OIP.Zh2ZPbGoXCj8V3j3_3m9UQHaGO&pid=Api&P=0&h=180"
+                  alt="Quiz"
+                  style="width: 100%; height: auto; border-radius: 10px"
+                />
+                <a href="https://quiz-app-xi-roan.vercel.app/">
+                  <div class="card_container">
+                    <h3 style="color: white">Fun Quiz</h3>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div class="grid_item">
-            <div class="card">
-              <img
-                src="https://wallpapers.com/images/hd/restaurant-background-fqxbzampnmnommt0.jpg"
-                alt="Food"
-              />
-              <a href="https://restaurant-sigma-green.vercel.app/">
-                <div class="card_container">
-                  <h3>Restaurant</h3>
-                </div>
-              </a>
+            <div class="grid_item" style="width: 30%">
+              <div
+                class="card"
+                style="
+                  width: 100%;
+                  text-align: center;
+                  padding: 20px;
+                  background: rgb(48, 48, 48);
+                  border-radius: 10px;
+                "
+              >
+                <img
+                  src="https://wallpapers.com/images/hd/restaurant-background-fqxbzampnmnommt0.jpg"
+                  alt="Food"
+                  style="width: 100%; height: auto; border-radius: 10px"
+                />
+                <a href="https://restaurant-sigma-green.vercel.app/">
+                  <div class="card_container">
+                    <h3 style="color: white">Restaurant</h3>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div class="grid_item">
-            <div class="card">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFNRjzchmpzD37lKMUgfbw2_Xzzlbgh9XFGA&s" alt="Movement" />
-              <a href="https://vehicle-movement-on-map-1.onrender.com/">
-                <div class="card_container">
-                  <h3>vehicle-movement-on-map</h3>
-                </div>
-              </a>
+            <div class="grid_item" style="width: 30%">
+              <div
+                class="card"
+                style="
+                  width: 100%;
+                  text-align: center;
+                  padding: 20px;
+                  background: rgb(48, 48, 48);
+                  border-radius: 10px;
+                "
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFNRjzchmpzD37lKMUgfbw2_Xzzlbgh9XFGA&s"
+                  alt="Movement"
+                  style="width: 100%; height: auto; border-radius: 10px"
+                />
+                <a href="https://vehicle-movement-on-map-1.onrender.com/">
+                  <div class="card_container">
+                    <h3 style="color: white">Vehicle Movement on Map</h3>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div class="grid_item">
-            <div class="card">
-              <img src="/image/google.jpeg" alt="Google Chrome" />
-              <a href="https://extension-seven-beta.vercel.app/">
-                <div class="card_container">
-                  <h3>Google Chrome Extension</h3>
-                </div>
-                
-              </a>
+            <div class="grid_item" style="width: 30%">
+              <div
+                class="card"
+                style="
+                  width: 100%;
+                  text-align: center;
+                  padding: 20px;
+                  background: rgb(48, 48, 48);
+                  border-radius: 10px;
+                "
+              >
+                <img
+                  src="/image/google.jpeg"
+                  alt="Google Chrome"
+                  style="width: 100%; height: auto; border-radius: 10px"
+                />
+                <a href="https://extension-seven-beta.vercel.app/">
+                  <div class="card_container">
+                    <h3 style="color: white">Google Chrome Extension</h3>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div class="grid_item">
-            <div class="card">
-              <img src="image/job.jpg" alt="Job Application" />
-              <a href="https://job-application-chi.vercel.app/">
-                <div class="card_container">
-                  <h3>Job Application</h3>
-                </div>
-              </a>
+            <div class="grid_item" style="width: 30%">
+              <div
+                class="card"
+                style="
+                  width: 100%;
+                  text-align: center;
+                  padding: 20px;
+                  background: rgb(48, 48, 48);
+                  border-radius: 10px;
+                "
+              >
+                <img
+                  src="https://png.pngtree.com/png-vector/20200330/ourmid/pngtree-covid-19-design-background-png-image_2168225.jpg"
+                  alt="Covid"
+                  style="width: 100%; height: auto; border-radius: 10px"
+                />
+                <a href="https://covid19-xi-rust.vercel.app/">
+                  <div class="card_container">
+                    <h3 style="color: white">Covid-19</h3>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div class="grid_item">
-            <div class="card">
-              <img src="image/th.jpg" alt="Music Website" />
-              <a href="https://music-website-five-pi.vercel.app/">
-                <div class="card_container">
-                  <h3>Music Website</h3>
-                </div>
-              </a>
+            <div class="grid_item" style="width: 30%">
+              <div
+                class="card"
+                style="
+                  width: 100%;
+                  text-align: center;
+                  padding: 20px;
+                  background: rgb(48, 48, 48);
+                  border-radius: 10px;
+                "
+              >
+                <img
+                  src="image/th.jpg"
+                  alt="Music Website"
+                  style="width: 100%; height: auto; border-radius: 10px"
+                />
+                <a href="https://music-website-five-pi.vercel.app/">
+                  <div class="card_container">
+                    <h3 style="color: white">Music Website</h3>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <form
-    
-    >
+    <form>
       <section id="contact">
         <div class="form">
           <h1>Contact <span>Me</span></h1>
-          <form  action="https://script.google.com/macros/s/AKfycbwqkPxthKJoJpGgAs-0u0wx1JSkJ_XaP_2I3Y-0rAmH9_-7X2huC3rj7BrT3DTiXTWlAw/exec" method="post">
+          <form
+            action="https://script.google.com/macros/s/AKfycbzw1zlJSLMZwo8SWzdpSH-JTSjXc9xEl1HLndOWk-OFIk8tARiq37-s4YXG3cGhoCMylA/exec"
+            method="post"
+          >
             <input
               type="text"
               name="name"
@@ -283,47 +360,36 @@
       <p><i class="fa-solid fa-copyright"></i>Sonali Mishra</p>
     </div>
 
-    <script>
-     
+    <script src="script.js">
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
 
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
 
-     document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Form ka default submit behavior rokna
-      
-      const formData = new FormData(form);
+          const formData = new FormData(form);
+          const jsonData = {};
+          formData.forEach((value, key) => {
+            jsonData[key] = value;
+          });
 
-      fetch(form.action, {
-        method: "POST",
-        body: formData,
-      })
-        .then(response => response.text())
-        .then(data => {
-          // Success message show karega
-          alert("✅ Your message has been sent successfully!");
-          form.reset(); // Form reset karna
-        })
-        .catch(error => {
-          alert("❌ Error! Please try again.");
-          console.error("Error:", error);
+          console.log(jsonData); // Check console to verify data
+
+          fetch(form.action, {
+            method: "POST",
+            body: new URLSearchParams(jsonData), // Properly formatted data
+          })
+            .then((response) => response.text())
+            .then((data) => {
+              alert("✅ Your message has been sent successfully!");
+              form.reset();
+            })
+            .catch((error) => {
+              alert("❌ Error! Please try again.");
+              console.error("Error:", error);
+            });
         });
-    });
-  });
-
-  //new code
-  document.addEventListener("DOMContentLoaded", function () {
-    const check = document.getElementById("check");
-    const navLinks = document.querySelectorAll("nav ul li a");
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            check.checked = false; // Checkbox ko uncheck karega
-        });
-    });
-  });
-
+      });
     </script>
   </body>
 </html>
