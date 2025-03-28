@@ -297,28 +297,50 @@ body {
   border: none;
   cursor: pointer;
 }
-@media screen and (max-width: 820px) {
+/* responsive about */
+@media screen and (max-width: 768px) {
   .about {
-    display: block;
-    margin-top: -13rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .about_section {
-    margin-left: -6rem;
-    width: 470px;
-  }
-  .about_section h1 {
-    font-size: 35px;
-  }
+
   .about_photo {
-    width: 200px;
-    height: 250px;
-    margin: 50px -70px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
-  .about_btn {
-    padding: 10px 20px;
-    font-size: 18px;
+
+  .about_photo img {
+    width: 100%;
+    max-width: 300px; /* Ensures the image doesn't get too large */
+    height: auto;
   }
 }
+/* responsive my work */
+@media (max-width: 768px) {
+  .project_container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .grid_item {
+    width: 100%; /* Take full width */
+    max-width: 400px; /* Set a max width for better scaling */
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .card img {
+    width: 100%; /* Ensure image takes full width of card */
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
 /* services section */
 h1.service_section {
   margin-top: 10rem;
@@ -389,6 +411,25 @@ div.card {
   .service_card {
     min-width: 280px;
     min-height: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home img,
+  .about_photo img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Optional: Set a max-width to avoid overly large images */
+  }
+
+  .home,
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .description {
+    margin-top: 20px;
   }
 }
 
