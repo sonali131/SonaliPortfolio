@@ -6,6 +6,17 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
+#message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#message {
+  font-size: 18px;
+  font-weight: bold;
+}
 
 nav {
   background-color: black;

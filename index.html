@@ -293,76 +293,75 @@
       </div>
     </section>
 
-    <form>
-      <section id="contact">
-        <div class="form">
-          <h1>Contact <span>Me</span></h1>
-          <form
-            action="https://script.google.com/macros/s/AKfycbzw1zlJSLMZwo8SWzdpSH-JTSjXc9xEl1HLndOWk-OFIk8tARiq37-s4YXG3cGhoCMylA/exec"
-            method="post"
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter Your Name"
-              required=""
-            /><br />
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Your Email"
-              required=""
-            /><br />
-            <input
-              type="number"
-              name="mno"
-              id="Enter Your Mobile Number"
-              placeholder="Enter Your Mobile Number"
-              required=""
-            /><br />
-            <textarea
-              name="msg"
-              id="msg"
-              rows="6"
-              cols="20"
-              placeholder="Enter Your Message"
-            ></textarea
-            ><br />
-            <button class="form_btn">Submit</button>
-          </form>
-        </div>
-      </section>
-    </form>
+    <section id="contact">
+      <div class="form">
+        <h1>Contact <span>Me</span></h1>
+        <form>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            required=""
+          /><br />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            required=""
+          /><br />
+          <input
+            type="number"
+            name="mno"
+            placeholder="Enter Your Mobile Number"
+            required=""
+          /><br />
+          <textarea
+            name="msg"
+            rows="6"
+            cols="20"
+            placeholder="Enter Your Message"
+          ></textarea
+          ><br />
+          <button class="form_btn">Submit</button>
+        </form>
+      </div>
+    </section>
+    <div id="message-container">
+      <p id="message"></p>
+    </div>
+
     <div class="footer">
       <p><i class="fa-solid fa-copyright"></i>Sonali Mishra</p>
     </div>
 
     <script src="script.js">
-      document.addEventListener("DOMContentLoaded", function () {
+                          document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector("form");
+        const messageContainer = document.getElementById("message-container");
+        const message = document.getElementById("message");
 
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
 
           const formData = new FormData(form);
-          const jsonData = {};
-          formData.forEach((value, key) => {
-            jsonData[key] = value;
-          });
+          const scriptURL =
+            "https://script.google.com/macros/s/AKfycby5K_LagH2GdUHpAvgKturIWAJZOJx0y6vTaQOaeDQOc6UWOG_ONf2NK2ouYfWOYWCdPg/exec";
 
-          console.log(jsonData); // Check console to verify data
-
-          fetch(form.action, {
+          fetch(scriptURL, {
             method: "POST",
-            body: new URLSearchParams(jsonData), // Properly formatted data
+            body: formData,
           })
             .then((response) => response.text())
             .then((data) => {
-              alert("✅ Your message has been sent successfully!");
+              message.innerText = "✅ Success! Your message has been sent.";
+              message.style.color = "green";
+              messageContainer.style.display = "flex";
               form.reset();
             })
             .catch((error) => {
-              alert("❌ Error! Please try again.");
+              message.innerText = "❌ Error! Please try again.";
+              message.style.color = "red";
+              messageContainer.style.display = "flex";
               console.error("Error:", error);
             });
         });
